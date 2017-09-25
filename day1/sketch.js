@@ -30,7 +30,7 @@ function draw() {
         beginShape();
         for (var w = -25; w < width + 25; w += 5) {
             var h = height / 2;
-            h += 200 * sin(w * 0.03 + frameCount * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + frameCount * 0.02)), 5);
+            h += 200 * sin(w * 0.03 + frameCount * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.01 + frameCount * 0.02)), 5);
             curveVertex(w, h); 
         }
         endShape();
