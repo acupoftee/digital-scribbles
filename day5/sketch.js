@@ -26,10 +26,10 @@ function draw() {
         // because each shape is different, the center y coordinate
         // calculated by dividing the height of the shape by 2.
         // Multiplying by sine adds amplitude to the stream of rings
-        var centerY = height / 2 + 50 * sin(frameCount / 60);
+        var centerY = height / 2 + 60 * sin(frameCount / 60);
 
         var xx = 100 * cos(angle + centerX / 10); 
-        var yy = 100 * sin(angle + centerX )/ 10;
+        var yy = 100 * sin(angle + centerX / 10);
         var vector = createVector(xx, yy);
         xx = (xx + centerX) / 150; yy = (yy + centerY) / 150;
         vector.mult(1 + 1.5 * noise(xx, yy));
@@ -44,7 +44,7 @@ function draw() {
     if (hue < 0) {
         hue += 255;
     }
-    stroke(hue, 100, 120);
+    //stroke(hue, 100, 120);
     strokeWeight(0.1);
     vertex(startX, startY);
     endShape();
